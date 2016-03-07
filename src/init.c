@@ -187,6 +187,9 @@ static const struct {
   { "followftp",        &opt.follow_ftp,        cmd_boolean },
   { "followtags",       &opt.follow_tags,       cmd_vector },
   { "forcehtml",        &opt.force_html,        cmd_boolean },
+#ifdef HAVE_LIBZ
+  { "ftpdeflate",       &opt.ftp_deflate,       cmd_boolean },
+#endif
   { "ftppasswd",        &opt.ftp_passwd,        cmd_string }, /* deprecated */
   { "ftppassword",      &opt.ftp_passwd,        cmd_string },
   { "ftpproxy",         &opt.ftp_proxy,         cmd_string },
