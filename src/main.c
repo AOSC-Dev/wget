@@ -289,6 +289,9 @@ static struct cmdline_option option_data[] =
     { "follow-tags", 0, OPT_VALUE, "followtags", -1 },
     { "force-directories", 'x', OPT_BOOLEAN, "dirstruct", -1 },
     { "force-html", 'F', OPT_BOOLEAN, "forcehtml", -1 },
+#ifdef HAVE_LIBZ
+    { "ftp-deflate", 0, OPT_BOOLEAN, "ftpdeflate", 0 },
+#endif
     { "ftp-password", 0, OPT_VALUE, "ftppassword", -1 },
 #ifdef __VMS
     { "ftp-stmlf", 0, OPT_BOOLEAN, "ftpstmlf", -1 },
@@ -807,6 +810,10 @@ HSTS options:\n"),
 
     N_("\
 FTP options:\n"),
+#ifdef HAVE_LIBZ
+    N_("\
+       --ftp-deflate               try to use defalte compression for FTP transfers\n"),
+#endif
 #ifdef __VMS
     N_("\
        --ftp-stmlf                 use Stream_LF format for all binary FTP files\n"),
