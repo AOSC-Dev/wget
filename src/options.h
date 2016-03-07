@@ -128,6 +128,7 @@ struct options
 
   bool always_rest;             /* Always use REST. */
   wgint start_pos;              /* Start position of a download. */
+  bool ftp_deflate;             /* Whether to use draft-preston-ftpext-deflate */
   char *ftp_user;               /* FTP username */
   char *ftp_passwd;             /* FTP password */
   bool netrc;                   /* Whether to read .netrc. */
